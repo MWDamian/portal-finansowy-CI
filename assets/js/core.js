@@ -15,16 +15,7 @@ $(function() {
     // The Receiver Function
     function receiver(update) { console.log(update) }
 
-	if(!$('.container').children('section:visible').length){
-		var view = $('nav.aside li').first().data('view');
-		showView(view)
-	}
-
-	$('nav.aside li, .button[data-view]').click(function(){
-		var view = $(this).data('view');
-		showView(view);
-	});
-
+	
 
 	// akcja po kliknięciu w element listy walut
 	// generowanie wykresu obszarowego
@@ -82,12 +73,6 @@ $(function() {
 	// 		window.spinnerRemove($('.stocksymbols-gallery'));
 	// 	});
 	// })
-
-
-	$('.levelUp').on('click', function(){
-		window.toUpperLevel(this);
-	});
-	
 
 })
 

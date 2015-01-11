@@ -18,6 +18,7 @@ class Portal extends CI_Controller {
 	}
 	public function index()
 	{
+
 		$this->currencies();
 	}
 	public function currencies()
@@ -51,9 +52,5 @@ class Portal extends CI_Controller {
 	{
 		$this->load->model('Usermodel');
 		return $this->load->view('nav', $this->Usermodel->getUserProfile(), TRUE);
-	}
-	public function _output($output)
-	{
-	    echo $output;
 	}
 }
