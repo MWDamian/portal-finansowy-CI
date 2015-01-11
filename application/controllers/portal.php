@@ -22,16 +22,12 @@ class Portal extends CI_Controller {
 	}
 	public function currencies()
 	{
-
 		$this->load->model('Financialmodel');
 		$financial['currencies'] = $this->Financialmodel->getCurrneciesToday();
 
 		$data['view']['nav'] = $this->_getNavigationBar();
 		$data['view']['content'] = $this->load->view('currencies-list', $financial, TRUE);
 		$this->load->view('portal-default', $data);
-	}
-	public function stockChart(){
-
 	}
 	public function login(){
 		$this->facebook->destroySession();
