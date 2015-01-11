@@ -201,6 +201,16 @@ nav.global-nav {
         nav.global-nav .bottom-panel .settings-panel li:hover {
           color: #518ae8; }
 
+.login img {
+  margin-top: 5px;
+  padding: 5px;
+  height: auto;
+  width: auto; }
+.login p {
+  font-size: 20px;
+  color: #666666;
+  margin-top: 20px; }
+
 .container {
   position: absolute;
   left: 15%;
