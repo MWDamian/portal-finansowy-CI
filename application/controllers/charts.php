@@ -20,15 +20,13 @@ class Charts extends CI_Controller {
 	{
 		$this->currencies();
 	}
-	public function currencies($currency, $rangeFrom = NULL, $rangeTo = NULL){
-		
-
-		//$this->load->model('Financialmodel');
-		//var_dump($this->Financialmodel->getCurrencyFullDate($currency));
-
+	public function currencies($currency){
 		$this->load->library('../controllers/portal');
+		$financial['type'] = 'currency';
+		$financial['content'] = $currency;
+
 		$data['view']['nav'] = $this->portal->_getNavigationBar();
-		$data['view']['content'] = $this->load->view('charts/stock', NULL, TRUE);
+		$data['view']['content'] = $this->load->view('charts/stock', $financial, TRUE);
 		$this->load->view('portal-default', $data);
 	}
 }

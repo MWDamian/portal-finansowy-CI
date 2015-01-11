@@ -38,7 +38,7 @@ html, body{
 	}
 }
 
-nav.global-nav{
+.nav-container{
 	text-align: center;
 	position: fixed;
 	height: 100%;
@@ -127,7 +127,7 @@ nav.global-nav{
 }
 
 
-.container{
+.content-container{
 	position: absolute;
 	left: 15%;
 	width: 85%;

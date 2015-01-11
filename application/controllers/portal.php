@@ -33,13 +33,13 @@ class Portal extends CI_Controller {
 	}
 	public function login(){
 		$this->facebook->destroySession();
-		$facebookData['login_url'] = $this->facebook->getLoginUrl(array(
+
+		$data['login_url'] = $this->facebook->getLoginUrl(array(
             'redirect_uri' => site_url('portal/index'), 
             'scope' => array("email, public_profile")
         ));
 
-		$data['view']['login'] = $this->load->view('login', $facebookData, TRUE);
-        $this->load->view('portal-default', $data);
+		$this->load->view('login', $data);
     }
     public function logout(){
 		$this->facebook->destroySession();
