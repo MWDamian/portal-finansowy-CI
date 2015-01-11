@@ -4,12 +4,16 @@
 	</header>
 	
 	<ul class="nav-menu">
-		<li data-view="currencies_list">
-			Waluty
-		</li>
-		<li data-view="stock">
-			Giełda
-		</li>
+		<a href="<?= base_url().'portal/currencies'; ?>" target="_self">
+			<li>
+				Waluty
+			</li>
+		</a>
+		<a href="<?= base_url().'portal/stock'; ?>" target="_self">
+			<li>
+				Giełda
+			</li>
+		</a>
 	</ul>
 
 	<div class="bottom-panel">
