@@ -10,9 +10,14 @@ class Usermodel extends CI_Model {
 	public function authorization()
 	{
 		$user = $this->facebook->getUser();
+
         if($user) {
-            return true;
+            $facebook['user_profile'] = $this->facebook->api('/me');
+            $facebook['logout_url'] = site_url('welcome/logout');
+
+            return $facebook;
         }else {
+
         	return false;           
         }
 	}
