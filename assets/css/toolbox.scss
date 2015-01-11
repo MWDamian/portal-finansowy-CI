@@ -171,6 +171,7 @@
     -ms-transition: $transition-property $transition-time $method;
     -o-transition: $transition-property $transition-time $method;
     transition: $transition-property $transition-time $method;
+<<<<<<< HEAD
 }
 // -----------------------------------------
 // TRANSFORMATION RULES
@@ -214,3 +215,6 @@
 // @include scale(1.5);          scales object 50% up
 // @include skew(12);            skews object 12 degrees
 // @include translate(10, -20);  moves object 10px left, -20px top
+=======
+}
+>>>>>>> def02222d3048c048e1c8197464b6d9a733b604e

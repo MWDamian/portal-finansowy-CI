@@ -12,15 +12,19 @@ class Usermodel extends CI_Model {
 		$user = $this->facebook->getUser();
 
         if($user) {
-            $facebook['user_profile'] = $this->facebook->api('/me');
-            $facebook['logout_url'] = site_url('welcome/logout');
-
-            return $facebook;
+            return true;
         }else {
-
         	return false;           
         }
 	}
+    public function getUserProfile(){
+        $user = $this->facebook->getUser();
+
+        $facebook['user']['user_profile'] = $this->facebook->api('/me');
+        $facebook['user']['logout_url'] = site_url('portal/logout');
+
+        return $facebook;
+    }
 }
 
 /* End of file welcome.php */
