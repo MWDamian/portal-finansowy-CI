@@ -2,21 +2,6 @@
 
 class Portal extends CI_Controller {
 
-	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
-	 *	- or -  
-	 * 		http://example.com/index.php/welcome/index
-	 *	- or -
-	 * Since this controller is set as the default controller in 
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see http://codeigniter.com/user_guide/general/urls.html
-	 */
 	public function __construct(){
 		parent::__construct();
 
@@ -37,10 +22,11 @@ class Portal extends CI_Controller {
 	}
 	public function currencies()
 	{
+
 		$this->load->model('Financialmodel');
 		$financial['currencies'] = $this->Financialmodel->getCurrneciesToday();
 
-		$data['view']['nav'] = $this->load->view('nav', NULL, TRUE);
+		$data['view']['nav'] = $this->_getNavigationBar();
 		$data['view']['content'] = $this->load->view('currencies-list', $financial, TRUE);
 		$this->load->view('portal-default', $data);
 	}
@@ -54,4 +40,20 @@ class Portal extends CI_Controller {
 		$data['view']['login'] = $this->load->view('login', $facebookData, TRUE);
         $this->load->view('portal-default', $data);
     }
+    public function logout(){
+		$this->facebook->destroySession();
+		redirect('/portal/login');
+    }
+
+
+
+    public function _getNavigationBar()
+	{
+		$this->load->model('Usermodel');
+		return $this->load->view('nav', $this->Usermodel->getUserProfile(), TRUE);
+	}
+	public function _output($output)
+	{
+	    echo $output;
+	}
 }

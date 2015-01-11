@@ -1,3 +1,117 @@
+/******** GLOBAL **************/
+.pull_left {
+  float: left; }
+
+.pull_right {
+  float: right; }
+
+.relative {
+  position: relative; }
+
+.absolute {
+  position: absolute; }
+
+.absolute_left {
+  position: absolute;
+  left: 0; }
+
+.absolute_right {
+  position: absolute;
+  right: 0; }
+
+.absolute_top {
+  position: absolute;
+  top: 0; }
+
+.absolute_bottom {
+  position: absolute;
+  bottom: 0; }
+
+.grid20 {
+  width: 20%; }
+
+.grid25 {
+  width: 25%; }
+
+.grid30 {
+  width: 30%; }
+
+.grid35 {
+  width: 35%; }
+
+.grid40 {
+  width: 40%; }
+
+.grid45 {
+  width: 45%; }
+
+.grid50 {
+  width: 50%; }
+
+.grid55 {
+  width: 55%; }
+
+.grid60 {
+  width: 60%; }
+
+.grid65 {
+  width: 65%; }
+
+.grid70 {
+  width: 70%; }
+
+.grid80 {
+  width: 80%; }
+
+.grid90 {
+  width: 90%; }
+
+.grid100 {
+  width: 100%; }
+
+.inline {
+  display: inline-block;
+  vertical-align: middle; }
+
+.table {
+  display: table; }
+  .table .cell {
+    display: table-cell;
+    vertical-align: middle; }
+
+.center {
+  margin: 0 auto; }
+
+.text_center {
+  text-align: center; }
+
+.superscript {
+  vertical-align: super;
+  font-size: 7px; }
+
+.contain {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain; }
+
+.cover {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.link {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer; }
+
+.fixed_overall {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+/******** MIXONS **************/
 html {
   font-family: 'Roboto Condensed', sans-serif; }
 
@@ -11,7 +125,7 @@ html {
   .button.button-small {
     padding: 10px 30px; }
 
-nav {
+nav.global-nav {
   text-align: center;
   position: fixed;
   height: 100%;
@@ -34,13 +148,13 @@ nav {
   /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#82aff9', endColorstr='#73a4f3',GradientType=1 );
   /* IE6-9 fallback on horizontal gradient */ }
-  nav header {
+  nav.global-nav header {
     padding: 20px; }
-    nav header img {
+    nav.global-nav header img {
       width: 100%; }
-  nav ul {
+  nav.global-nav ul.nav-menu {
     margin-top: 30px; }
-    nav ul li {
+    nav.global-nav ul.nav-menu li {
       width: 100%;
       text-align: center;
       color: white;
@@ -48,11 +162,43 @@ nav {
       padding: 25px 0;
       border-bottom: 1px solid #abc9fb;
       cursor: pointer; }
-      nav ul li:last-child {
+      nav.global-nav ul.nav-menu li:last-child {
         border-bottom: none; }
-      nav ul li:hover, nav ul li.active {
+      nav.global-nav ul.nav-menu li:hover, nav.global-nav ul.nav-menu li.active {
         background-color: #518ae8;
         box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2) inset; }
+  nav.global-nav .bottom-panel {
+    position: absolute;
+    bottom: 20px;
+    width: 80%;
+    left: 10%; }
+    nav.global-nav .bottom-panel .user-panel {
+      text-align: center;
+      margin: 10px auto; }
+      nav.global-nav .bottom-panel .user-panel img {
+        width: 70%;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        -ms-border-radius: 20px;
+        border-radius: 20px;
+        margin-bottom: 10px; }
+      nav.global-nav .bottom-panel .user-panel h3 {
+        color: white;
+        font-size: 20px;
+        text-align: center;
+        font-weight: normal; }
+    nav.global-nav .bottom-panel .settings-panel {
+      margin: 10px auto;
+      padding: 10px 0;
+      border-top: 1px solid white; }
+      nav.global-nav .bottom-panel .settings-panel li {
+        width: 45%;
+        display: inline-block;
+        text-align: center;
+        color: white;
+        font-size: 13px; }
+        nav.global-nav .bottom-panel .settings-panel li:hover {
+          color: #518ae8; }
 
 .container {
   position: absolute;
