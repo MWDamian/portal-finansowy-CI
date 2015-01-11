@@ -24,6 +24,21 @@ class Financialmodel extends CI_Model {
 
 		return $currencies;
 	}
+	public function getCurrencyRates($from = "PLN", $to = NULL, $dateFrom = NULL, $dateTo = NULL)
+	{
+		if($to == NULL){
+			$to = "USD";
+		}
+		if($dateFrom == NULL){
+			$dateFrom = "2002-01-01";
+		}
+		if($dateTo == NULL){
+			$dateTo = date('Y-m-d');
+		}
+		$jsonUrl = file_get_contents("http://jsonrates.com/historical/?from=$from&to=$to&dateStart=$dateFrom&dateEnd=$dateTo");
+		echo $jsonUrl;
+
+	}
 }
 	
 
