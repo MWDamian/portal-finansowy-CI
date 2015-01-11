@@ -86,6 +86,21 @@ nav{
 		}
 	}
 }
+
+.login{
+	img{
+		margin-top: 5px;
+		padding: 5px;
+		height: auto;
+		width:auto; 
+	}
+	p{
+		font-size: 20px;
+		color: $grey-light;
+		margin-top: 20px;
+
+	}
+}
 .container{
 	position: absolute;
 	left: 15%;
