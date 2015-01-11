@@ -9,10 +9,12 @@
 			
 			<ul class="list-currencies">
 				<?php foreach ($currencies['currencies'] as $field => $value){ ?>			
-					<li data-currency-name="<? $field ?>">
-						<h3><?= $field ?></h3>
-						<p><?= $value['rate'] ?></p>
-					</li>
+					<a href="<?php echo base_url().'charts/currencies/'.$field ?>" target="_self">
+						<li>
+							<h3><?= $field ?></h3>
+							<p><?= $value['rate'] ?></p>
+						</li>
+					</a>
 				<?php }; ?>
 			</ul>
 		</div>

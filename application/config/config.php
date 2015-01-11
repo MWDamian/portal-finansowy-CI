@@ -9,8 +9,8 @@
 | -------------------------------------------------------------------
 */
 $config['header_css'] = array('reset.css','core.css', 'http://fonts.googleapis.com/css?family=Roboto+Condensed:700,300&subset=latin,latin-ext');
-$config['header_js']  = array();
-$config['footer_js'] = array('jquery/jquery-1.11.2.min.js', 'authorization.js', 'helpers.js', 'core.js',);
+$config['header_js']  = array('jquery/jquery-1.11.2.min.js', 'helpers.js');
+$config['footer_js'] = array('core.js');
 
 
 /*

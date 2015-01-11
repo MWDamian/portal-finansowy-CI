@@ -6,8 +6,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Portal walutowy</title>
 		<?= autoload_header_css(); ?>
+		<?= autoload_header_js(); ?>
 		
-
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 		<!--[if lt IE 9]>
@@ -16,10 +16,12 @@
 		<![endif]-->
 	</head>
 	<body>
-
-		<?php echo $nav; ?>
-		<?php echo $content; ?>
-
+		<?php
+			foreach ($view as $key) {
+				echo $key;
+			}
+		?>
+		
 		<?= autoload_footer_js(); ?>
 	</body>
 </html>
