@@ -114,15 +114,20 @@
 /******** MIXONS **************/
 .login {
   position: absolute;
-  top: 50%;
+  top: 25%;
   width: 70%;
-  left: 15%;
-  height: 100%;
-  -webkit-transform: translateY(-25%);
-  -moz-transform: translateY(-25%);
-  -ms-transform: translateY(-25%);
-  -o-transform: translateY(-25%);
-  transform: translateY(-25%); }
+  max-width: 600px;
+  left: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%); }
   .login header {
     text-align: center; }
     .login header img {
@@ -146,7 +151,20 @@
       -moz-border-radius: 30px;
       -ms-border-radius: 30px;
       border-radius: 30px;
-      border: none;
-      color: white;
-      font-weight: bold;
-      text-align: center; }
+      border: none; }
+      .login div.login-box a:hover {
+        background: #607EBB; }
+      .login div.login-box a:active {
+        box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5) inset; }
+      .login div.login-box a span, .login div.login-box a img {
+        display: inline-block;
+        vertical-align: middle; }
+      .login div.login-box a span {
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        line-height: 41px;
+        font-size: 20px; }
+      .login div.login-box a img {
+        width: 20px;
+        margin-left: 10px; }

@@ -210,6 +210,13 @@
   -o-transform:      translateY($top);
   transform:         translateY($top);
 }
+@mixin translateX($left: 0) {
+  -webkit-transform: translateX($left);
+  -moz-transform:    translateX($left);
+  -ms-transform:     translateX($left);
+  -o-transform:      translateX($left);
+  transform:         translateX($left);
+}
 // @include rotate(15);          rotates object 15 degrees
 // @include scale(1.5);          scales object 50% up
 // @include skew(12);            skews object 12 degrees
